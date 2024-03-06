@@ -1,0 +1,120 @@
+*{
+    margin: 0;
+    padding: 0;
+    
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    width: 100%;
+    background:url(fondo.gif);
+    background-position: center;
+    background-size: cover;
+}
+.content-form{
+    position: relative;
+    width: 400px;
+    height: 300px;
+    background: transparent;
+    border: 2px solid rgb(4, 68, 242);
+    border-radius: 20px;
+    backdrop-filter: blur(13px);
+    margin: auto;
+    padding: 20px;
+    margin-top: 30px;
+    overflow: auto;
+}
+h1,h3{
+    text-align: center;
+    color: rgb(251, 246, 246);
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+form{
+    margin: auto;
+}
+.cajas-texto{
+    width: 96%;
+    padding: 5px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    border: 2px solid #fff; 
+    color: #f7f6f6; 
+    background-color: transparent;
+    outline: none;
+    transition: border-color 0.5s, color 0.5s;
+}
+.opcion{
+    width: 99%;
+    padding: 5px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    border: 2px solid #fff; 
+    color: #fbf8f8; 
+    background-color: transparent;
+    outline: none;
+    transition: border-color 0.5s, color 0.5s;
+}
+
+.cajas-texto::placeholder,.opcion::placeholder {
+    font-size: 1rem;
+    color: rgba(239, 234, 234, 0.986);
+}
+
+.cajas-texto:hover {
+    border-color: #2980b9; 
+    color: #f9f5f5; 
+}
+.opcion:hover {
+    border-color: #2980b9; 
+    color: #f6f5f5; 
+    background-color:rgba(17, 18, 18, 0.401);
+}
+
+.boton {
+    display: flex;
+    justify-content: center; /* Centrar horizontalmente */
+    align-items: center; /* Centrar verticalmente */
+}
+
+#botonCalcular,#botonCancelar {
+    background-color: #3498db;
+    border: none;
+    color: #fff;
+    padding: 20px 50px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 10px 20px;
+    cursor: pointer;
+    border-radius: 4px;
+    position: relative;
+    overflow: hidden;
+}
+/* Estilo para el efecto*/
+#botonCalcular::before,#botonCancelar::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: -100%;
+    width: 200%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent 0%, rgba(15, 15, 15, 0.5) 50%, transparent 100%);
+    animation: moveWater 2s linear infinite;
+}
+/* Animación para el efecto*/
+@keyframes moveWater {
+    0% {
+        left: -100%;
+    }
+    100% {
+        left: 100%;
+    }
+}
+
+#botonCalcular:hover,#botonCancelar:hover {
+    background-color: #341e98;
+}
